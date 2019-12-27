@@ -1,0 +1,35 @@
+app_name = "书法检字";
+ok = "确定";
+cursive_script = "草书";
+small_seal_script = "小篆";
+title_search = "搜字";
+
+title_favourites_and_history = "记录和我的最愛";
+title_favourites = "我的最爱";
+title_history = "记录";
+title_settings = "设定";
+pref_general = "一般设定";
+search_placeholder = "输入单字";
+search_placeholder_large = "请在上方搜寻框输入单字（支援繁、简、日韩汉字及异体字搜寻）。";
+search_input_req = "没有输入汉字。";
+search_history = "搜寻记录";
+clear_history = "清除记录";
+clear_all = " 全部清除";
+my_favourites = "我的最爱";
+no_results = "没有结果。";
+settings_locale = "语言";
+settings_background = "背景";
+settings_paper1 = "纸 1";
+settings_paper2 = "纸 2";
+settings_paper3 = "纸 3";
+settings_paper4 = "纸 4";
+settings_paper5 = "纸 5";
+settings_paper6 = "纸 6";
+settings_paper7 = "纸 7";
+random_character = " 清风翻书";
+date_of_addition = "加入日期：";
+recognition_instructions = "保持相机与书帖平行，确保光线充足，不要旋转相机。";
+s_conversion = " 即时传译 (β)";
+
+settings_paper0 = "挥春纸";
+emulation = "临摹";

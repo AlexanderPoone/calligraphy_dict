@@ -1,0 +1,34 @@
+app_name = "Dict de la caligrafía china";
+ok = "OK";
+cursive_script = "Escritura cursiva";
+small_seal_script = "Pequeña escritura de sello";
+title_search = "Buscar";
+
+title_favourites_and_history = "Favoritos & Historial";
+title_favourites = "Favoritos";
+title_history = "Historial";
+title_settings = "Configuración";
+pref_general = "General";
+search_placeholder = "Introduzca un carácter";
+search_placeholder_large = "Introduzca un solo carácter (admite carácteres tradicionales y simplificados, kanji japonés, hanja coreanos y variantes tipográficas) en la barra de búsqueda de arriba.";
+search_input_req = "Por favor introduzca un carácter chino.";
+search_history = "Historial de búsqueda";
+clear_history = "Borrar historial";
+clear_all = " Borrar todos";
+my_favourites = "Mis favoritos";
+no_results = "No hay resultados.";
+settings_locale = "Idioma";
+settings_background = "Fondo";
+settings_paper1 = "Papel 1";
+settings_paper2 = "Papel 2";
+settings_paper3 = "Papel 3";
+settings_paper4 = "Papel 4";
+settings_paper5 = "Papel 5";
+settings_paper6 = "Papel 6";
+settings_paper7 = "Papel 7";
+random_character = "Carácter aleatorio";
+date_of_addition = "Fecha de adición:";
+s_conversion = " Conversión simultánea (β)";
+
+settings_paper0 = "Papal \"fai-chun\" de año nuevo chino";
+emulation = "Emulación";

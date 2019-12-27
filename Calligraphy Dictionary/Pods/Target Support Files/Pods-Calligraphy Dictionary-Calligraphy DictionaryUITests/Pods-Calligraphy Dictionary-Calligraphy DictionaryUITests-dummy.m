@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests
+@end

@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Calligraphy Dictionary
+
+  Created by Victor Poon on 21/11/2019.
+  Copyright © 2019 SoftFeta. All rights reserved.
+*/
+CFBundleDisplayName = "Dict de la caligrafía china";

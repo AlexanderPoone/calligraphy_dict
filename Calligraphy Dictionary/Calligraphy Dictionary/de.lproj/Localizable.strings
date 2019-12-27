@@ -1,0 +1,34 @@
+app_name = "Chinesische Kalligrafie-Wtb.";
+ok = "OK";
+cursive_script = "Grasschrift";
+small_seal_script = "Kleine Siegelschrift";
+title_search = "Suche";
+
+title_favourites_and_history = "Favoriten & Verlauf";
+title_favourites = "Favoriten";
+title_history = "Verlauf";
+title_settings = "Einstellungen";
+pref_general = "Allgemeine";
+search_placeholder = "Geben Sie ein einzelnes Zeichen ein";
+search_placeholder_large = "Geben Sie ein einzelnes Zeichen (unterstützt traditionelles und vereinfachtes Zeichen, japanisches Kanji, koreanisches Hanja und typografische Varianten) in die Suchleiste oben ein.";
+search_input_req = "Bitte geben Sie ein Zeichen ein.";
+search_history = "Suchverlauf";
+clear_history = "Verlauf löschen";
+clear_all = " Alles löschen";
+my_favourites = "Meine Favoriten";
+no_results = "Keine Ergebnisse.";
+settings_locale = "Sprache";
+settings_background = "Hintergrund";
+settings_paper1 = "Papier 1";
+settings_paper2 = "Papier 2";
+settings_paper3 = "Papier 3";
+settings_paper4 = "Papier 4";
+settings_paper5 = "Papier 5";
+settings_paper6 = "Papier 6";
+settings_paper7 = "Papier 7";
+random_character = " Zufälliges Zeichen";
+date_of_addition = "Hinzufügungsdatum:";
+s_conversion = " Simultane Konvertierung (β)";
+
+settings_paper0 = "Chinesisches Neujahrsfest Fai-Chun-Papier";
+emulation = "Emulation";

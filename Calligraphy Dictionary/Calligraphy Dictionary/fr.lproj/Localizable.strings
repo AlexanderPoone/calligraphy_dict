@@ -1,0 +1,34 @@
+app_name = "Dict de la calligraphie chinoise";
+ok = "OK";
+cursive_script = "Écriture cursive";
+small_seal_script = "Petite écriture de sceau";
+title_search = "Recherche";
+
+title_favourites_and_history = "Favoris & Historique";
+title_favourites = "Favoris";
+title_history = "Historique";
+title_settings = "Préférences";
+pref_general = "Genéral";
+search_placeholder = "Entrez un caractère";
+search_placeholder_large = "Veuillez saisir un seul caractère chinois dans la zone de recherche ci-dessus (caractères chinois traditionnels et simplifiés, kanjis japonais et hanjas coréens et toutes les variantes typographiques sont compatibles).";
+search_input_req = "Aucun caractère chinois n'est entré.";
+search_history = "Historique de recherche";
+clear_history = "Supprimer l'historique";
+clear_all = "Supprimer tout";
+my_favourites = "Mon favoris";
+no_results = "Aucun résultat.";
+settings_locale = "Langue";
+settings_background = "Arrière-plan";
+settings_paper1 = "Papier 1";
+settings_paper2 = "Papier 2";
+settings_paper3 = "Papier 3";
+settings_paper4 = "Papier 4";
+settings_paper5 = "Papier 5";
+settings_paper6 = "Papier 6";
+settings_paper7 = "Papier 7";
+random_character = " Caractère au hasard";
+date_of_addition = "Date d'addition:";
+s_conversion = " Conversion simultanée (β)";
+
+settings_paper0 = "Papier de «faï tchuenne» du Nouvel Ans Chinois";
+emulation = "Émulation";

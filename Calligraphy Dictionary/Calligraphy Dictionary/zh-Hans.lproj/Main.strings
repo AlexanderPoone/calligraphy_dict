@@ -1,0 +1,75 @@
+
+/* Class = "UILabel"; text = "Locale"; ObjectID = "0kh-ls-EHw"; */
+"0kh-ls-EHw.text" = "Locale";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1IR-hz-Sgs"; */
+"1IR-hz-Sgs.text" = "Label";
+
+/* Class = "UITableViewSection"; headerTitle = "General"; ObjectID = "1PT-1T-XPA"; */
+"1PT-1T-XPA.headerTitle" = "General";
+
+/* Class = "UILabel"; text = "Paper 5"; ObjectID = "257-nl-siV"; */
+"257-nl-siV.text" = "Paper 5";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4mF-MZ-Sqp"; */
+"4mF-MZ-Sqp.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5AW-fC-eMw"; */
+"5AW-fC-eMw.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "5lb-d5-pWp"; */
+"5lb-d5-pWp.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7Pa-34-eY2"; */
+"7Pa-34-eY2.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8CQ-pb-jX0"; */
+"8CQ-pb-jX0.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "CFc-Ii-Rqd"; */
+"CFc-Ii-Rqd.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "E5k-hD-ALe"; */
+"E5k-hD-ALe.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "IFZ-0r-NyC"; */
+"IFZ-0r-NyC.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QEL-UC-AdQ"; */
+"QEL-UC-AdQ.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "RDA-jX-48v"; */
+"RDA-jX-48v.title" = "Item 1";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SKw-F7-hr1"; */
+"SKw-F7-hr1.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UnE-cH-Yea"; */
+"UnE-cH-Yea.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WZq-co-Qv7"; */
+"WZq-co-Qv7.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "dSS-nE-ZWV"; */
+"dSS-nE-ZWV.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "h7g-LX-og0"; */
+"h7g-LX-og0.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Background"; ObjectID = "mIr-yO-Dd7"; */
+"mIr-yO-Dd7.text" = "Background";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "po2-gD-SpX"; */
+"po2-gD-SpX.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "r0u-9n-IWn"; */
+"r0u-9n-IWn.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "r86-hM-Agc"; */
+"r86-hM-Agc.title" = "Item";
+
+/* Class = "UILabel"; text = "English (UK)"; ObjectID = "uw7-HK-zeD"; */
+"uw7-HK-zeD.text" = "English (UK)";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vhH-dV-aR5"; */
+"vhH-dV-aR5.normalTitle" = "Button";

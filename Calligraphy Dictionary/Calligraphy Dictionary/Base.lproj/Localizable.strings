@@ -1,0 +1,35 @@
+app_name = "Calligraphy Dictionary";
+ok = "OK";
+cursive_script = "Cursive script";
+small_seal_script = "Small seal script";
+title_search = "Search";
+
+title_favourites_and_history = "Favourites & History";
+title_favourites = "Favourites";
+title_history = "History";
+title_settings = "Settings";
+pref_general = "General";
+search_placeholder = "Enter a single character";
+search_placeholder_large = "Enter a single character (supports traditional Chinese, simplified Chinese, Japanese kanjis, Korean hanjas and typographical variants) in the search bar above.";
+search_input_req = "Please enter a character.";
+search_history = "Search history";
+clear_history = "Clear history";
+clear_all = " Clear all";
+my_favourites = "My favorites";
+no_results = "No results.";
+settings_locale = "Locale";
+settings_background = "Background";
+settings_paper1 = "Paper 1";
+settings_paper2 = "Paper 2";
+settings_paper3 = "Paper 3";
+settings_paper4 = "Paper 4";
+settings_paper5 = "Paper 5";
+settings_paper6 = "Paper 6";
+settings_paper7 = "Paper 7";
+random_character = " Random character";
+date_of_addition = "Date of addition:";
+recognition_instructions = "Place your camera parallel to the calligraphy work without any rotations, ensure good lighting.";
+s_conversion = " Simultaneous conversion (β)";
+
+settings_paper0 = "Chinese New Year fai chun paper";
+emulation = "Emulation";

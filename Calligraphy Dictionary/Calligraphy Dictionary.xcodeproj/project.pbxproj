@@ -1,0 +1,955 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B0DF02623B6153600A5BBA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF00523B6153300A5BBA4 /* MainViewController.swift */; };
+		4B0DF02723B6153600A5BBA4 /* ReckonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF00623B6153300A5BBA4 /* ReckonViewController.swift */; };
+		4B0DF02823B6153600A5BBA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0DF00723B6153300A5BBA4 /* Assets.xcassets */; };
+		4B0DF02A23B6153600A5BBA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF00923B6153300A5BBA4 /* SceneDelegate.swift */; };
+		4B0DF02B23B6153600A5BBA4 /* BlockListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF00A23B6153300A5BBA4 /* BlockListTableViewCell.swift */; };
+		4B0DF02D23B6153600A5BBA4 /* ReckonObjcViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF00C23B6153300A5BBA4 /* ReckonObjcViewController.mm */; };
+		4B0DF03023B6153600A5BBA4 /* LocaleDropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B0DF00F23B6153400A5BBA4 /* LocaleDropDownTableViewCell.xib */; };
+		4B0DF03123B6153600A5BBA4 /* LocaleDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF01023B6153400A5BBA4 /* LocaleDropDownTableViewCell.swift */; };
+		4B0DF03223B6153600A5BBA4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF01223B6153400A5BBA4 /* HistoryViewController.swift */; };
+		4B0DF03323B6153600A5BBA4 /* CaptionCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF01323B6153400A5BBA4 /* CaptionCollectionReusableView.swift */; };
+		4B0DF03523B6153600A5BBA4 /* SmallSealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF01723B6153400A5BBA4 /* SmallSealViewController.swift */; };
+		4B0DF03623B6153600A5BBA4 /* StarredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF01823B6153400A5BBA4 /* StarredViewController.swift */; };
+		4B0DF03723B6153600A5BBA4 /* PrefsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF01923B6153400A5BBA4 /* PrefsTableViewController.swift */; };
+		4B0DF03A23B6153600A5BBA4 /* AdobeKaitiStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B0DF01C23B6153500A5BBA4 /* AdobeKaitiStd-Regular.otf */; };
+		4B0DF03B23B6153600A5BBA4 /* fmdb.db in Resources */ = {isa = PBXBuildFile; fileRef = 4B0DF01D23B6153500A5BBA4 /* fmdb.db */; };
+		4B0DF03C23B6153600A5BBA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF01E23B6153500A5BBA4 /* AppDelegate.swift */; };
+		4B0DF03D23B6153600A5BBA4 /* BackgroundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF01F23B6153500A5BBA4 /* BackgroundTableViewCell.swift */; };
+		4B0DF03E23B6153600A5BBA4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF02023B6153500A5BBA4 /* TabBarViewController.swift */; };
+		4B0DF03F23B6153600A5BBA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF02123B6153500A5BBA4 /* ViewController.swift */; };
+		4B0DF04023B6153600A5BBA4 /* BackgroundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B0DF02223B6153500A5BBA4 /* BackgroundTableViewCell.xib */; };
+		4B0DF04123B6153600A5BBA4 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF02323B6153500A5BBA4 /* DBManager.swift */; };
+		4B0DF04323B6153600A5BBA4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0DF02523B6153500A5BBA4 /* CollectionViewCell.swift */; };
+		4B4D284E23B61C8E000006EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D284623B61C8C000006EB /* Localizable.strings */; };
+		4B4D284F23B61C8E000006EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D284823B61C8D000006EB /* Main.storyboard */; };
+		4B4D285023B61C8E000006EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D284A23B61C8D000006EB /* InfoPlist.strings */; };
+		4B4D285123B61C8E000006EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D284C23B61C8D000006EB /* LaunchScreen.storyboard */; };
+		4B4D285823B61C9B000006EB /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D285323B61C9B000006EB /* Main.strings */; };
+		4B4D285923B61C9B000006EB /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D285523B61C9B000006EB /* LaunchScreen.strings */; };
+		4B4D286F23B624D5000006EB /* EmulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D286E23B624D5000006EB /* EmulationViewController.swift */; };
+		4BF033C923B6115F00C4C8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF033C823B6115F00C4C8FD /* AppDelegate.swift */; };
+		4BF033CB23B6115F00C4C8FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF033CA23B6115F00C4C8FD /* SceneDelegate.swift */; };
+		4BF033CD23B6115F00C4C8FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF033CC23B6115F00C4C8FD /* ViewController.swift */; };
+		4BF033E023B6116500C4C8FD /* Calligraphy_DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF033DF23B6116500C4C8FD /* Calligraphy_DictionaryTests.swift */; };
+		4BF033EB23B6116500C4C8FD /* Calligraphy_DictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF033EA23B6116500C4C8FD /* Calligraphy_DictionaryUITests.swift */; };
+		7BCC6B08196BAB54C785A1E4 /* Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045DCA84771F39B86E27AA2E /* Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests.framework */; };
+		86FBC2F992677EC1CD6D84BD /* Pods_Calligraphy_Dictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87D6EC57E4BC58DBA9AEBB0 /* Pods_Calligraphy_Dictionary.framework */; };
+		A549E85A338E04E106AC08ED /* Pods_Calligraphy_DictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C252EB1B8A3F8A300E4A7C /* Pods_Calligraphy_DictionaryTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BF033DC23B6116500C4C8FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF033BD23B6115F00C4C8FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BF033C423B6115F00C4C8FD;
+			remoteInfo = "Calligraphy Dictionary";
+		};
+		4BF033E723B6116500C4C8FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF033BD23B6115F00C4C8FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BF033C423B6115F00C4C8FD;
+			remoteInfo = "Calligraphy Dictionary";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		026A89D3CB548D84BA342641 /* Pods-Calligraphy DictionaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calligraphy DictionaryTests.debug.xcconfig"; path = "Target Support Files/Pods-Calligraphy DictionaryTests/Pods-Calligraphy DictionaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		045DCA84771F39B86E27AA2E /* Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07C252EB1B8A3F8A300E4A7C /* Pods_Calligraphy_DictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calligraphy_DictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B29E451790F5696119455B /* Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B0DF00423B6153200A5BBA4 /* Calligraphy Dictionary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calligraphy Dictionary-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B0DF00523B6153300A5BBA4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4B0DF00623B6153300A5BBA4 /* ReckonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReckonViewController.swift; sourceTree = "<group>"; };
+		4B0DF00723B6153300A5BBA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B0DF00923B6153300A5BBA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4B0DF00A23B6153300A5BBA4 /* BlockListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockListTableViewCell.swift; sourceTree = "<group>"; };
+		4B0DF00C23B6153300A5BBA4 /* ReckonObjcViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ReckonObjcViewController.mm; sourceTree = "<group>"; };
+		4B0DF00F23B6153400A5BBA4 /* LocaleDropDownTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocaleDropDownTableViewCell.xib; sourceTree = "<group>"; };
+		4B0DF01023B6153400A5BBA4 /* LocaleDropDownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleDropDownTableViewCell.swift; sourceTree = "<group>"; };
+		4B0DF01123B6153400A5BBA4 /* ReckonObjcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReckonObjcViewController.h; sourceTree = "<group>"; };
+		4B0DF01223B6153400A5BBA4 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		4B0DF01323B6153400A5BBA4 /* CaptionCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptionCollectionReusableView.swift; sourceTree = "<group>"; };
+		4B0DF01423B6153400A5BBA4 /* Calligraphy Dictionary-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Calligraphy Dictionary-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B0DF01523B6153400A5BBA4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4B0DF01723B6153400A5BBA4 /* SmallSealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallSealViewController.swift; sourceTree = "<group>"; };
+		4B0DF01823B6153400A5BBA4 /* StarredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarredViewController.swift; sourceTree = "<group>"; };
+		4B0DF01923B6153400A5BBA4 /* PrefsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefsTableViewController.swift; sourceTree = "<group>"; };
+		4B0DF01A23B6153400A5BBA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B0DF01C23B6153500A5BBA4 /* AdobeKaitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdobeKaitiStd-Regular.otf"; sourceTree = "<group>"; };
+		4B0DF01D23B6153500A5BBA4 /* fmdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = fmdb.db; sourceTree = "<group>"; };
+		4B0DF01E23B6153500A5BBA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B0DF01F23B6153500A5BBA4 /* BackgroundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTableViewCell.swift; sourceTree = "<group>"; };
+		4B0DF02023B6153500A5BBA4 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4B0DF02123B6153500A5BBA4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B0DF02223B6153500A5BBA4 /* BackgroundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackgroundTableViewCell.xib; sourceTree = "<group>"; };
+		4B0DF02323B6153500A5BBA4 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		4B0DF02523B6153500A5BBA4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4B4D284723B61C8C000006EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B4D284923B61C8D000006EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B4D284B23B61C8D000006EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B4D284D23B61C8D000006EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B4D285223B61C9B000006EB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B4D285423B61C9B000006EB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		4B4D285623B61C9B000006EB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4B4D285723B61C9B000006EB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B4D285A23B61CA6000006EB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B4D285B23B61CA6000006EB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B4D285C23B61CA6000006EB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4B4D285D23B61CA6000006EB /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		4B4D285E23B61CB0000006EB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		4B4D285F23B61CB0000006EB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B4D286023B61CB0000006EB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4B4D286123B61CB0000006EB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B4D286223B61CB9000006EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		4B4D286323B61CB9000006EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B4D286423B61CB9000006EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4B4D286523B61CB9000006EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4B4D286623B61CC7000006EB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4B4D286723B61CC7000006EB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4B4D286823B61CC8000006EB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4B4D286923B61CC8000006EB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		4B4D286A23B61CD0000006EB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		4B4D286B23B61CD0000006EB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4B4D286C23B61CD0000006EB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4B4D286D23B61CD0000006EB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4B4D286E23B624D5000006EB /* EmulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulationViewController.swift; sourceTree = "<group>"; };
+		4BF033C523B6115F00C4C8FD /* Calligraphy Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calligraphy Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF033C823B6115F00C4C8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4BF033CA23B6115F00C4C8FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4BF033CC23B6115F00C4C8FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4BF033DB23B6116500C4C8FD /* Calligraphy DictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calligraphy DictionaryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF033DF23B6116500C4C8FD /* Calligraphy_DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calligraphy_DictionaryTests.swift; sourceTree = "<group>"; };
+		4BF033E123B6116500C4C8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BF033E623B6116500C4C8FD /* Calligraphy DictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calligraphy DictionaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF033EA23B6116500C4C8FD /* Calligraphy_DictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calligraphy_DictionaryUITests.swift; sourceTree = "<group>"; };
+		4BF033EC23B6116500C4C8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67C781C226E88BAAAF1F9869 /* Pods-Calligraphy DictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calligraphy DictionaryTests.release.xcconfig"; path = "Target Support Files/Pods-Calligraphy DictionaryTests/Pods-Calligraphy DictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		68F86B121248F03EDA7C5EB8 /* Pods-Calligraphy Dictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calligraphy Dictionary.release.xcconfig"; path = "Target Support Files/Pods-Calligraphy Dictionary/Pods-Calligraphy Dictionary.release.xcconfig"; sourceTree = "<group>"; };
+		690FF601795E27DD5477FEB9 /* Pods-Calligraphy Dictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calligraphy Dictionary.debug.xcconfig"; path = "Target Support Files/Pods-Calligraphy Dictionary/Pods-Calligraphy Dictionary.debug.xcconfig"; sourceTree = "<group>"; };
+		F25A0F19E904F4DB78B2BDFF /* Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.release.xcconfig"; path = "Target Support Files/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F87D6EC57E4BC58DBA9AEBB0 /* Pods_Calligraphy_Dictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calligraphy_Dictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BF033C223B6115F00C4C8FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FBC2F992677EC1CD6D84BD /* Pods_Calligraphy_Dictionary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BF033D823B6116500C4C8FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A549E85A338E04E106AC08ED /* Pods_Calligraphy_DictionaryTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BF033E323B6116500C4C8FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCC6B08196BAB54C785A1E4 /* Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BF033BC23B6115F00C4C8FD = {
+			isa = PBXGroup;
+			children = (
+				4BF033C723B6115F00C4C8FD /* Calligraphy Dictionary */,
+				4BF033DE23B6116500C4C8FD /* Calligraphy DictionaryTests */,
+				4BF033E923B6116500C4C8FD /* Calligraphy DictionaryUITests */,
+				4BF033C623B6115F00C4C8FD /* Products */,
+				C1F0FEA800340746B3B5BEE1 /* Pods */,
+				665E29BF39F3A0ABE49BF3A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4BF033C623B6115F00C4C8FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BF033C523B6115F00C4C8FD /* Calligraphy Dictionary.app */,
+				4BF033DB23B6116500C4C8FD /* Calligraphy DictionaryTests.xctest */,
+				4BF033E623B6116500C4C8FD /* Calligraphy DictionaryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BF033C723B6115F00C4C8FD /* Calligraphy Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				4B4D284A23B61C8D000006EB /* InfoPlist.strings */,
+				4B4D285323B61C9B000006EB /* Main.strings */,
+				4B4D284C23B61C8D000006EB /* LaunchScreen.storyboard */,
+				4B4D285523B61C9B000006EB /* LaunchScreen.strings */,
+				4B4D284623B61C8C000006EB /* Localizable.strings */,
+				4B4D284823B61C8D000006EB /* Main.storyboard */,
+				4B4D286E23B624D5000006EB /* EmulationViewController.swift */,
+				4B0DF01123B6153400A5BBA4 /* ReckonObjcViewController.h */,
+				4B0DF00C23B6153300A5BBA4 /* ReckonObjcViewController.mm */,
+				4BF033C823B6115F00C4C8FD /* AppDelegate.swift */,
+				4BF033CA23B6115F00C4C8FD /* SceneDelegate.swift */,
+				4BF033CC23B6115F00C4C8FD /* ViewController.swift */,
+				4B0DF01C23B6153500A5BBA4 /* AdobeKaitiStd-Regular.otf */,
+				4B0DF01E23B6153500A5BBA4 /* AppDelegate.swift */,
+				4B0DF00723B6153300A5BBA4 /* Assets.xcassets */,
+				4B0DF01F23B6153500A5BBA4 /* BackgroundTableViewCell.swift */,
+				4B0DF02223B6153500A5BBA4 /* BackgroundTableViewCell.xib */,
+				4B0DF00A23B6153300A5BBA4 /* BlockListTableViewCell.swift */,
+				4B0DF01423B6153400A5BBA4 /* Calligraphy Dictionary-Bridging-Header.h */,
+				4B0DF01323B6153400A5BBA4 /* CaptionCollectionReusableView.swift */,
+				4B0DF02523B6153500A5BBA4 /* CollectionViewCell.swift */,
+				4B0DF02323B6153500A5BBA4 /* DBManager.swift */,
+				4B0DF01D23B6153500A5BBA4 /* fmdb.db */,
+				4B0DF01223B6153400A5BBA4 /* HistoryViewController.swift */,
+				4B0DF01A23B6153400A5BBA4 /* Info.plist */,
+				4B0DF01023B6153400A5BBA4 /* LocaleDropDownTableViewCell.swift */,
+				4B0DF00F23B6153400A5BBA4 /* LocaleDropDownTableViewCell.xib */,
+				4B0DF00523B6153300A5BBA4 /* MainViewController.swift */,
+				4B0DF01523B6153400A5BBA4 /* PrefixHeader.pch */,
+				4B0DF01923B6153400A5BBA4 /* PrefsTableViewController.swift */,
+				4B0DF00623B6153300A5BBA4 /* ReckonViewController.swift */,
+				4B0DF00923B6153300A5BBA4 /* SceneDelegate.swift */,
+				4B0DF01723B6153400A5BBA4 /* SmallSealViewController.swift */,
+				4B0DF01823B6153400A5BBA4 /* StarredViewController.swift */,
+				4B0DF02023B6153500A5BBA4 /* TabBarViewController.swift */,
+				4B0DF02123B6153500A5BBA4 /* ViewController.swift */,
+				4B0DF00423B6153200A5BBA4 /* Calligraphy Dictionary-Bridging-Header.h */,
+			);
+			path = "Calligraphy Dictionary";
+			sourceTree = "<group>";
+		};
+		4BF033DE23B6116500C4C8FD /* Calligraphy DictionaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BF033DF23B6116500C4C8FD /* Calligraphy_DictionaryTests.swift */,
+				4BF033E123B6116500C4C8FD /* Info.plist */,
+			);
+			path = "Calligraphy DictionaryTests";
+			sourceTree = "<group>";
+		};
+		4BF033E923B6116500C4C8FD /* Calligraphy DictionaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4BF033EA23B6116500C4C8FD /* Calligraphy_DictionaryUITests.swift */,
+				4BF033EC23B6116500C4C8FD /* Info.plist */,
+			);
+			path = "Calligraphy DictionaryUITests";
+			sourceTree = "<group>";
+		};
+		665E29BF39F3A0ABE49BF3A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F87D6EC57E4BC58DBA9AEBB0 /* Pods_Calligraphy_Dictionary.framework */,
+				045DCA84771F39B86E27AA2E /* Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests.framework */,
+				07C252EB1B8A3F8A300E4A7C /* Pods_Calligraphy_DictionaryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1F0FEA800340746B3B5BEE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				690FF601795E27DD5477FEB9 /* Pods-Calligraphy Dictionary.debug.xcconfig */,
+				68F86B121248F03EDA7C5EB8 /* Pods-Calligraphy Dictionary.release.xcconfig */,
+				16B29E451790F5696119455B /* Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.debug.xcconfig */,
+				F25A0F19E904F4DB78B2BDFF /* Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.release.xcconfig */,
+				026A89D3CB548D84BA342641 /* Pods-Calligraphy DictionaryTests.debug.xcconfig */,
+				67C781C226E88BAAAF1F9869 /* Pods-Calligraphy DictionaryTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BF033C423B6115F00C4C8FD /* Calligraphy Dictionary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BF033EF23B6116500C4C8FD /* Build configuration list for PBXNativeTarget "Calligraphy Dictionary" */;
+			buildPhases = (
+				87E9479F29636EDAE26883A9 /* [CP] Check Pods Manifest.lock */,
+				4BF033C123B6115F00C4C8FD /* Sources */,
+				4BF033C223B6115F00C4C8FD /* Frameworks */,
+				4BF033C323B6115F00C4C8FD /* Resources */,
+				504CBB52EF321B7E0C8A3F98 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Calligraphy Dictionary";
+			productName = "Calligraphy Dictionary";
+			productReference = 4BF033C523B6115F00C4C8FD /* Calligraphy Dictionary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BF033DA23B6116500C4C8FD /* Calligraphy DictionaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BF033F223B6116500C4C8FD /* Build configuration list for PBXNativeTarget "Calligraphy DictionaryTests" */;
+			buildPhases = (
+				03AFB291581D229EA6F2CFE4 /* [CP] Check Pods Manifest.lock */,
+				4BF033D723B6116500C4C8FD /* Sources */,
+				4BF033D823B6116500C4C8FD /* Frameworks */,
+				4BF033D923B6116500C4C8FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BF033DD23B6116500C4C8FD /* PBXTargetDependency */,
+			);
+			name = "Calligraphy DictionaryTests";
+			productName = "Calligraphy DictionaryTests";
+			productReference = 4BF033DB23B6116500C4C8FD /* Calligraphy DictionaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4BF033E523B6116500C4C8FD /* Calligraphy DictionaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BF033F523B6116500C4C8FD /* Build configuration list for PBXNativeTarget "Calligraphy DictionaryUITests" */;
+			buildPhases = (
+				A5B88259172DBF9B20C45F31 /* [CP] Check Pods Manifest.lock */,
+				4BF033E223B6116500C4C8FD /* Sources */,
+				4BF033E323B6116500C4C8FD /* Frameworks */,
+				4BF033E423B6116500C4C8FD /* Resources */,
+				4FD0C9AFB208AD2FC6BA418C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BF033E823B6116500C4C8FD /* PBXTargetDependency */,
+			);
+			name = "Calligraphy DictionaryUITests";
+			productName = "Calligraphy DictionaryUITests";
+			productReference = 4BF033E623B6116500C4C8FD /* Calligraphy DictionaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BF033BD23B6115F00C4C8FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = SoftFeta;
+				TargetAttributes = {
+					4BF033C423B6115F00C4C8FD = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+					4BF033DA23B6116500C4C8FD = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 4BF033C423B6115F00C4C8FD;
+					};
+					4BF033E523B6116500C4C8FD = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 4BF033C423B6115F00C4C8FD;
+					};
+				};
+			};
+			buildConfigurationList = 4BF033C023B6115F00C4C8FD /* Build configuration list for PBXProject "Calligraphy Dictionary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+				de,
+				es,
+				ja,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = 4BF033BC23B6115F00C4C8FD;
+			productRefGroup = 4BF033C623B6115F00C4C8FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BF033C423B6115F00C4C8FD /* Calligraphy Dictionary */,
+				4BF033DA23B6116500C4C8FD /* Calligraphy DictionaryTests */,
+				4BF033E523B6116500C4C8FD /* Calligraphy DictionaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BF033C323B6115F00C4C8FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B0DF03023B6153600A5BBA4 /* LocaleDropDownTableViewCell.xib in Resources */,
+				4B4D285823B61C9B000006EB /* Main.strings in Resources */,
+				4B0DF02823B6153600A5BBA4 /* Assets.xcassets in Resources */,
+				4B4D285123B61C8E000006EB /* LaunchScreen.storyboard in Resources */,
+				4B4D284F23B61C8E000006EB /* Main.storyboard in Resources */,
+				4B4D284E23B61C8E000006EB /* Localizable.strings in Resources */,
+				4B4D285923B61C9B000006EB /* LaunchScreen.strings in Resources */,
+				4B0DF04023B6153600A5BBA4 /* BackgroundTableViewCell.xib in Resources */,
+				4B0DF03A23B6153600A5BBA4 /* AdobeKaitiStd-Regular.otf in Resources */,
+				4B4D285023B61C8E000006EB /* InfoPlist.strings in Resources */,
+				4B0DF03B23B6153600A5BBA4 /* fmdb.db in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BF033D923B6116500C4C8FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BF033E423B6116500C4C8FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03AFB291581D229EA6F2CFE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calligraphy DictionaryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FD0C9AFB208AD2FC6BA418C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		504CBB52EF321B7E0C8A3F98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calligraphy Dictionary/Pods-Calligraphy Dictionary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Calligraphy Dictionary/Pods-Calligraphy Dictionary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Calligraphy Dictionary/Pods-Calligraphy Dictionary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87E9479F29636EDAE26883A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calligraphy Dictionary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5B88259172DBF9B20C45F31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BF033C123B6115F00C4C8FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF033CD23B6115F00C4C8FD /* ViewController.swift in Sources */,
+				4BF033C923B6115F00C4C8FD /* AppDelegate.swift in Sources */,
+				4B0DF02D23B6153600A5BBA4 /* ReckonObjcViewController.mm in Sources */,
+				4B0DF03C23B6153600A5BBA4 /* AppDelegate.swift in Sources */,
+				4B0DF03223B6153600A5BBA4 /* HistoryViewController.swift in Sources */,
+				4BF033CB23B6115F00C4C8FD /* SceneDelegate.swift in Sources */,
+				4B0DF03523B6153600A5BBA4 /* SmallSealViewController.swift in Sources */,
+				4B0DF02B23B6153600A5BBA4 /* BlockListTableViewCell.swift in Sources */,
+				4B0DF02723B6153600A5BBA4 /* ReckonViewController.swift in Sources */,
+				4B0DF03E23B6153600A5BBA4 /* TabBarViewController.swift in Sources */,
+				4B0DF04323B6153600A5BBA4 /* CollectionViewCell.swift in Sources */,
+				4B0DF02623B6153600A5BBA4 /* MainViewController.swift in Sources */,
+				4B0DF03623B6153600A5BBA4 /* StarredViewController.swift in Sources */,
+				4B0DF03F23B6153600A5BBA4 /* ViewController.swift in Sources */,
+				4B0DF03D23B6153600A5BBA4 /* BackgroundTableViewCell.swift in Sources */,
+				4B0DF02A23B6153600A5BBA4 /* SceneDelegate.swift in Sources */,
+				4B0DF03123B6153600A5BBA4 /* LocaleDropDownTableViewCell.swift in Sources */,
+				4B4D286F23B624D5000006EB /* EmulationViewController.swift in Sources */,
+				4B0DF03723B6153600A5BBA4 /* PrefsTableViewController.swift in Sources */,
+				4B0DF04123B6153600A5BBA4 /* DBManager.swift in Sources */,
+				4B0DF03323B6153600A5BBA4 /* CaptionCollectionReusableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BF033D723B6116500C4C8FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF033E023B6116500C4C8FD /* Calligraphy_DictionaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BF033E223B6116500C4C8FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF033EB23B6116500C4C8FD /* Calligraphy_DictionaryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BF033DD23B6116500C4C8FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BF033C423B6115F00C4C8FD /* Calligraphy Dictionary */;
+			targetProxy = 4BF033DC23B6116500C4C8FD /* PBXContainerItemProxy */;
+		};
+		4BF033E823B6116500C4C8FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BF033C423B6115F00C4C8FD /* Calligraphy Dictionary */;
+			targetProxy = 4BF033E723B6116500C4C8FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B4D284623B61C8C000006EB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B4D284723B61C8C000006EB /* Base */,
+				4B4D285223B61C9B000006EB /* fr */,
+				4B4D285B23B61CA6000006EB /* de */,
+				4B4D285F23B61CB0000006EB /* es */,
+				4B4D286323B61CB9000006EB /* ja */,
+				4B4D286723B61CC7000006EB /* zh-Hans */,
+				4B4D286D23B61CD0000006EB /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4B4D284823B61C8D000006EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B4D284923B61C8D000006EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4B4D284A23B61C8D000006EB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B4D284B23B61C8D000006EB /* Base */,
+				4B4D285723B61C9B000006EB /* fr */,
+				4B4D285A23B61CA6000006EB /* de */,
+				4B4D286123B61CB0000006EB /* es */,
+				4B4D286523B61CB9000006EB /* ja */,
+				4B4D286623B61CC7000006EB /* zh-Hans */,
+				4B4D286B23B61CD0000006EB /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4B4D284C23B61C8D000006EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B4D284D23B61C8D000006EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4B4D285323B61C9B000006EB /* Main.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B4D285423B61C9B000006EB /* fr */,
+				4B4D285D23B61CA6000006EB /* de */,
+				4B4D285E23B61CB0000006EB /* es */,
+				4B4D286223B61CB9000006EB /* ja */,
+				4B4D286923B61CC8000006EB /* zh-Hans */,
+				4B4D286A23B61CD0000006EB /* zh-Hant */,
+			);
+			name = Main.strings;
+			sourceTree = "<group>";
+		};
+		4B4D285523B61C9B000006EB /* LaunchScreen.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B4D285623B61C9B000006EB /* fr */,
+				4B4D285C23B61CA6000006EB /* de */,
+				4B4D286023B61CB0000006EB /* es */,
+				4B4D286423B61CB9000006EB /* ja */,
+				4B4D286823B61CC8000006EB /* zh-Hans */,
+				4B4D286C23B61CD0000006EB /* zh-Hant */,
+			);
+			name = LaunchScreen.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BF033ED23B6116500C4C8FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4BF033EE23B6116500C4C8FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BF033F023B6116500C4C8FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 690FF601795E27DD5477FEB9 /* Pods-Calligraphy Dictionary.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 49;
+				DEVELOPMENT_TEAM = 94RT5FA8WL;
+				INFOPLIST_FILE = "Calligraphy Dictionary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.07;
+				PRODUCT_BUNDLE_IDENTIFIER = "softfeta.com.github.Calligraphy-Dictionary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Calligraphy Dictionary/Calligraphy Dictionary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BF033F123B6116500C4C8FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F86B121248F03EDA7C5EB8 /* Pods-Calligraphy Dictionary.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 49;
+				DEVELOPMENT_TEAM = 94RT5FA8WL;
+				INFOPLIST_FILE = "Calligraphy Dictionary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.07;
+				PRODUCT_BUNDLE_IDENTIFIER = "softfeta.com.github.Calligraphy-Dictionary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Calligraphy Dictionary/Calligraphy Dictionary-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4BF033F323B6116500C4C8FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 026A89D3CB548D84BA342641 /* Pods-Calligraphy DictionaryTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94RT5FA8WL;
+				INFOPLIST_FILE = "Calligraphy DictionaryTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "softfeta.com.github.Calligraphy-DictionaryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calligraphy Dictionary.app/Calligraphy Dictionary";
+			};
+			name = Debug;
+		};
+		4BF033F423B6116500C4C8FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C781C226E88BAAAF1F9869 /* Pods-Calligraphy DictionaryTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94RT5FA8WL;
+				INFOPLIST_FILE = "Calligraphy DictionaryTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "softfeta.com.github.Calligraphy-DictionaryTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calligraphy Dictionary.app/Calligraphy Dictionary";
+			};
+			name = Release;
+		};
+		4BF033F623B6116500C4C8FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B29E451790F5696119455B /* Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94RT5FA8WL;
+				INFOPLIST_FILE = "Calligraphy DictionaryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "softfeta.com.github.Calligraphy-DictionaryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Calligraphy Dictionary";
+			};
+			name = Debug;
+		};
+		4BF033F723B6116500C4C8FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25A0F19E904F4DB78B2BDFF /* Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94RT5FA8WL;
+				INFOPLIST_FILE = "Calligraphy DictionaryUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "softfeta.com.github.Calligraphy-DictionaryUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Calligraphy Dictionary";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BF033C023B6115F00C4C8FD /* Build configuration list for PBXProject "Calligraphy Dictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF033ED23B6116500C4C8FD /* Debug */,
+				4BF033EE23B6116500C4C8FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BF033EF23B6116500C4C8FD /* Build configuration list for PBXNativeTarget "Calligraphy Dictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF033F023B6116500C4C8FD /* Debug */,
+				4BF033F123B6116500C4C8FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BF033F223B6116500C4C8FD /* Build configuration list for PBXNativeTarget "Calligraphy DictionaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF033F323B6116500C4C8FD /* Debug */,
+				4BF033F423B6116500C4C8FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BF033F523B6116500C4C8FD /* Build configuration list for PBXNativeTarget "Calligraphy DictionaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF033F623B6116500C4C8FD /* Debug */,
+				4BF033F723B6116500C4C8FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BF033BD23B6115F00C4C8FD /* Project object */;
+}

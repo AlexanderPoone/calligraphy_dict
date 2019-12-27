@@ -1,0 +1,6 @@
+framework module Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests {
+  umbrella header "Pods-Calligraphy Dictionary-Calligraphy DictionaryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

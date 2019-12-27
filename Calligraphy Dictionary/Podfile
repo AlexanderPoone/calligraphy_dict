@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.2'
+
+  target 'Calligraphy Dictionary' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+    pod 'Alamofire', :git => "https://github.com/Alamofire/Alamofire", :branch => 'master'
+    pod 'ReachabilitySwift', '~> 4.3.1'
+    pod 'Ono'
+    pod 'SwiftIcons', '~> 2.3.2'
+    pod 'Google-Mobile-Ads-SDK'
+    pod 'FlagKit'
+    pod 'DropDown'
+    pod 'SwiftyJSON'
+    pod 'FMDB'
+    pod 'OpenCV2'
+
+  target 'Calligraphy DictionaryTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Calligraphy DictionaryUITests' do
+    # Pods for testing
+  end
+
+end

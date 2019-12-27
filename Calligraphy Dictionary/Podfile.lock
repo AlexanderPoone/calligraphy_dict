@@ -1,0 +1,97 @@
+PODS:
+  - Alamofire (5.0.0-rc.3)
+  - DropDown (2.3.13)
+  - FlagKit (2.2)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - Google-Mobile-Ads-SDK (7.53.1):
+    - GoogleAppMeasurement (~> 6.0)
+  - GoogleAppMeasurement (6.1.7):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (= 0.3.9011)
+  - GoogleUtilities/AppDelegateSwizzler (6.4.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.4.0)
+  - GoogleUtilities/Logger (6.4.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.4.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.4.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.4.0)"
+  - GoogleUtilities/Reachability (6.4.0):
+    - GoogleUtilities/Logger
+  - nanopb (0.3.9011):
+    - nanopb/decode (= 0.3.9011)
+    - nanopb/encode (= 0.3.9011)
+  - nanopb/decode (0.3.9011)
+  - nanopb/encode (0.3.9011)
+  - Ono (2.1.2)
+  - OpenCV2 (4.1.2)
+  - ReachabilitySwift (4.3.1)
+  - SwiftIcons (2.3.2)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire`, branch `master`)
+  - DropDown
+  - FlagKit
+  - FMDB
+  - Google-Mobile-Ads-SDK
+  - Ono
+  - OpenCV2
+  - ReachabilitySwift (~> 4.3.1)
+  - SwiftIcons (~> 2.3.2)
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - FlagKit
+    - FMDB
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
+    - nanopb
+    - Ono
+    - OpenCV2
+    - ReachabilitySwift
+    - SwiftIcons
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: master
+    :git: https://github.com/Alamofire/Alamofire
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: 8b7474adb7f7ed4825b56aeea286e250de0f4d0a
+    :git: https://github.com/Alamofire/Alamofire
+
+SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FlagKit: eca7dc89064b0c986302ba9acefad1bf80a435b1
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Google-Mobile-Ads-SDK: fac081606dbd438d8db57198b83ba8b5f875a601
+  GoogleAppMeasurement: db118eb61a97dd8c4f7014e368d3c335cbbcf80a
+  GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
+  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  Ono: 26a7c1fc4df13ece7747560a1d80655807a8a000
+  OpenCV2: 3ac0512dabaddda936f112507f9095697d392551
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  SwiftIcons: e652cfd2676441c462ad57b6e92977faf577e590
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: dbdff05640307f42b24c1743309af6c79d301e0f
+
+COCOAPODS: 1.9.0.beta.2
