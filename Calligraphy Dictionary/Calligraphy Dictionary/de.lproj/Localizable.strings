@@ -32,3 +32,7 @@ s_conversion = " Simultane Konvertierung (β)";
 
 settings_paper0 = "Chinesisches Neujahrsfest Fai-Chun-Papier";
 emulation = "Emulation";
+
+cangjie = "Cangjie";
+cantonese_yale = "Kantonesische Jyutping";
+mandarin_pinyin = "Mandarin Pinyin";

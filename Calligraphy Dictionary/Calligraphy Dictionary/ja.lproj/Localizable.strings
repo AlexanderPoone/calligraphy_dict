@@ -33,3 +33,7 @@ s_conversion = " 同時通訳 (β)";
 
 settings_paper0 = "揮春紙";
 emulation = "臨摹";
+
+cangjie = "倉";
+cantonese_yale = "広東（Jyutping）";
+mandarin_pinyin = "官話（ピン音）";

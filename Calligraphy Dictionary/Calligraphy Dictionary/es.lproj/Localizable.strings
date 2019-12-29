@@ -32,3 +32,7 @@ s_conversion = " Conversión simultánea (β)";
 
 settings_paper0 = "Papal \"fai-chun\" de año nuevo chino";
 emulation = "Emulación";
+
+cangjie = "Cangjie";
+cantonese_yale = "Cantonés Jyutping";
+mandarin_pinyin = "Mandarín Pinyin";

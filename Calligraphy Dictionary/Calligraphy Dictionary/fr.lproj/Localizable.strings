@@ -32,3 +32,7 @@ s_conversion = " Conversion simultanée (β)";
 
 settings_paper0 = "Papier de «faï tchuenne» du Nouvel Ans Chinois";
 emulation = "Émulation";
+
+cangjie = "Cangjie";
+cantonese_yale = "Cantonais Jyutping";
+mandarin_pinyin = "Mandarin Pinyin";

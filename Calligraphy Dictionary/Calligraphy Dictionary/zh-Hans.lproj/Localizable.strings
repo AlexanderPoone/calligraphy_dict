@@ -33,3 +33,7 @@ s_conversion = " 即时传译 (β)";
 
 settings_paper0 = "挥春纸";
 emulation = "临摹";
+
+cangjie = "仓";
+cantonese_yale = "粤拼";
+mandarin_pinyin = "官话（汉语拼音）";

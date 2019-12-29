@@ -234,6 +234,16 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var mBigCharDisplay: UILabel!
     
+    @IBOutlet weak var mCangjieLbl: UILabel!
+    @IBOutlet weak var mCangjie: UILabel!
+    
+    @IBOutlet weak var mCantoneseYaleLbl: UILabel!
+    @IBOutlet weak var mCantoneseYale: UILabel!
+    
+    @IBOutlet weak var mHanyuPinyinLbl: UILabel!
+    @IBOutlet weak var mHanyuPinyin: UILabel!
+    
+    
     @IBAction func mRandom() {
         mSearchBox.text = DBManager.shared.random()
         mSearchPicts()
@@ -248,9 +258,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             let picts = DBManager.shared.getPict(mSearchBox.text!)
             if picts.count > 0 {
                 mInstructions.isHidden = true
+                mCangjieLbl.isHidden = false
+                mCantoneseYaleLbl.isHidden = false
+                mHanyuPinyinLbl.isHidden = false
                 mEngFlag.isHidden = false
                 mFrFlag.isHidden = false
                 mDeFlag.isHidden = false
+                
                 let rawValue = CFStringEncodings.big5.rawValue
                 let encoding = CFStringEncoding(rawValue)
                 let big5Encoding = CFStringConvertEncodingToNSStringEncoding(encoding)
@@ -279,6 +293,74 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     } else {
                                          self.mEngTrans.text = ""
                                     }
+                                    
+                                    
+                                    let regexCJ = try! NSRegularExpression(pattern: "(?<=頡碼:\\<\\/td\\>\\n\\t\\t\\<td class=t2\\>).*?(?=\\<\\/)")
+                                    if let matchCJ = regexCJ.firstMatch(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count)) {
+                                        self.mCangjie.text = response.value!.substring(with: Range(matchCJ.range, in: response.value!)!)
+                                    } else {
+                                         self.mCangjie.text = ""
+                                    }
+                                    
+                                    var canto:[String] = []
+                                    var canto2:[String] = []
+                                    var cantoStr = ""
+                                    
+                                    let regexTxt = try! NSRegularExpression(pattern: "(?<=sound\\.php\\?s=).*?(?=\")")
+                                    let matchTxt = regexTxt.matches(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count))
+                                    if matchTxt.count > 0 {
+                                        canto = matchTxt.map { (res) -> String in
+                                            return response.value!.substring(with: Range(res.range, in: response.value!)!)
+                                        }
+                                    }
+                                    
+                                    print("bbu")
+                                    print(canto)
+                                    
+                                    let regexSig = try! NSRegularExpression(pattern: "(?<=\\<td\\>\\<div nowrap\\>).*?(?=\\<\\/td)")
+                                    let matchSig = regexSig.matches(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count))
+                                    if matchSig.count > 0 {
+                                        canto2 = matchSig.map { (res) -> String in
+                                            return response.value!.substring(with: Range(res.range, in: response.value!)!)
+                                        }
+                                    }
+                                    
+                                    for x in 0..<(canto.count) {
+                                        var canto2Str = ""
+                                        
+                                        if let commaStartIndex = canto2[x].firstIndex(where: { (char) -> Bool in
+                                            return !char.isASCII
+                                        }) {
+                                            if let commaIndex = canto2[x].firstIndex(of: ",") {
+                                                canto2Str = canto2[x].substring(with: commaStartIndex..<commaIndex)
+                                            } else {
+                                                canto2Str = canto2[x].substring(with: commaStartIndex..<canto2[x].endIndex)
+                                            }
+                                            let regexPattern = "<.*?>"
+
+                                            do {
+                                            let regex = try NSRegularExpression(pattern: regexPattern, options: .caseInsensitive)
+
+                                            var matches = regex.matches(in: canto2Str, options: .withoutAnchoringBounds, range: NSMakeRange(0, canto2Str.count))
+                                                var canto2Mutable = NSMutableString(string: canto2Str)
+                                            regex.replaceMatches(in: canto2Mutable, options: .withoutAnchoringBounds, range: NSMakeRange(0, canto2Str.count), withTemplate: "")
+                                                canto2Str = canto2Mutable as String
+                                            } catch let error {
+                                                                            print(error)
+                                                                        }
+                                        }
+                                        
+                                        
+                                        cantoStr += "\(canto2Str): \(canto[x])"
+                                        if x != canto.count-1 {
+                                            cantoStr += ";\n"
+                                        }
+                                    }
+                                    
+                                    self.mCantoneseYale.text = cantoStr
+
+                                    
+                                    
                                     //                            do {
                                     //                                let document = try ONOXMLDocument(string: regex.stringByReplacingMatches(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count), withTemplate: ""), encoding: String.Encoding.utf8.rawValue)
                                     //
@@ -314,6 +396,19 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                         self.mDeTrans.text = response.value!.substring(with: Range(match.range, in: response.value!)!).stringByDecodingHTMLEntities
                                     } else {
                                         self.mDeTrans.text = ""
+                                    }
+                                    
+                                    let regexHY = try! NSRegularExpression(pattern: "(?<=\"pinyin\": \").*?(?=\")")
+                                    let matchHY = regexHY.matches(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count))
+                                    if matchHY.count > 0 {
+                                        self.mHanyuPinyin.text = matchHY.map { (res) -> String in
+                                            return response.value!.substring(with: Range(res.range, in: response.value!)!)
+                                        }.filter {
+                                            (str) -> Bool in
+                                            return str.count < 8
+                                        }.joined(separator: ", ")
+                                    } else {
+                                         self.mCangjie.text = ""
                                     }
                                 }
                                 //                            do {
@@ -369,6 +464,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         mAdView.adSize = GADAdSize(size: CGSize(width: 320, height: 50), flags: 0)
         mAdView.load(request)
         
+        
         if mPreferences.object(forKey: "PREF_BACKGROUND") == nil{
             mPreferences.set(5, forKey: "PREF_BACKGROUND")
             mPreferences.synchronize()
@@ -377,6 +473,14 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         mCollectionView.register(CaptionCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Caption")
         mCollectionView.delegate = self
         mCollectionView.dataSource = self
+        
+        mCangjieLbl.isHidden = true
+        mCangjieLbl.text = NSLocalizedString("cangjie", comment: "")
+        mCantoneseYaleLbl.isHidden = true
+        mCantoneseYaleLbl.text = NSLocalizedString("cantonese_yale", comment: "")
+        mHanyuPinyinLbl.isHidden = true
+        mHanyuPinyinLbl.text = NSLocalizedString("mandarin_pinyin", comment: "")
+        
         mSearchBox.placeholder = NSLocalizedString("search_placeholder", comment: "")
         mSearchBtn.setIcon(icon: .icofont(.search), iconSize: nil, color: .white, backgroundColor: .systemBlue, forState: .normal)
         mRandomBtn.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.questionCircle), iconColor: .white, postfixText: NSLocalizedString("random_character", comment: ""), postfixTextColor: .white, backgroundColor: .systemGreen, forState: .normal, textSize: nil, iconSize: nil)
