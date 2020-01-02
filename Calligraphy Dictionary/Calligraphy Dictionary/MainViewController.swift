@@ -102,37 +102,37 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     /// Tells the delegate an ad request loaded an ad.
-       func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-           print("adViewDidReceiveAd")
-       }
-       
-       /// Tells the delegate an ad request failed.
-       func adView(_ bannerView: GADBannerView,
-                   didFailToReceiveAdWithError error: GADRequestError) {
-           print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-       }
-       
-       /// Tells the delegate that a full-screen view will be presented in response
-       /// to the user clicking on an ad.
-       func adViewWillPresentScreen(_ bannerView: GADBannerView) {
-           print("adViewWillPresentScreen")
-       }
-       
-       /// Tells the delegate that the full-screen view will be dismissed.
-       func adViewWillDismissScreen(_ bannerView: GADBannerView) {
-           print("adViewWillDismissScreen")
-       }
-       
-       /// Tells the delegate that the full-screen view has been dismissed.
-       func adViewDidDismissScreen(_ bannerView: GADBannerView) {
-           print("adViewDidDismissScreen")
-       }
-       
-       /// Tells the delegate that a user click will open another app (such as
-       /// the App Store), backgrounding the current app.
-       func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
-           print("adViewWillLeaveApplication")
-       }
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("adViewDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+                didFailToReceiveAdWithError error: GADRequestError) {
+        print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("adViewWillPresentScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewWillDismissScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewDidDismissScreen")
+    }
+    
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+        print("adViewWillLeaveApplication")
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         print("Hi \(mCurrent.count)")
@@ -273,9 +273,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                     var codepoint = ""
                     for code in big5Data { codepoint += "%\(String(code, radix: 16))" }
                     
-                    //"https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=\()&useutf8=true"
-                    
-                    
                     //for code in mSearchBox.text!.utf8 { print(code) }
                     print("https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=\(codepoint)")
                     AF.request("https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/search.php?q=\(codepoint)")
@@ -291,7 +288,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     if let match = regex.firstMatch(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count)) {
                                         self.mEngTrans.text = response.value!.substring(with: Range(match.range, in: response.value!)!)
                                     } else {
-                                         self.mEngTrans.text = ""
+                                        self.mEngTrans.text = ""
                                     }
                                     
                                     
@@ -299,7 +296,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     if let matchCJ = regexCJ.firstMatch(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count)) {
                                         self.mCangjie.text = response.value!.substring(with: Range(matchCJ.range, in: response.value!)!)
                                     } else {
-                                         self.mCangjie.text = ""
+                                        self.mCangjie.text = ""
                                     }
                                     
                                     var canto:[String] = []
@@ -337,17 +334,17 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                                 canto2Str = canto2[x].substring(with: commaStartIndex..<canto2[x].endIndex)
                                             }
                                             let regexPattern = "<.*?>"
-
+                                            
                                             do {
-                                            let regex = try NSRegularExpression(pattern: regexPattern, options: .caseInsensitive)
-
-                                            var matches = regex.matches(in: canto2Str, options: .withoutAnchoringBounds, range: NSMakeRange(0, canto2Str.count))
+                                                let regex = try NSRegularExpression(pattern: regexPattern, options: .caseInsensitive)
+                                                
+                                                var matches = regex.matches(in: canto2Str, options: .withoutAnchoringBounds, range: NSMakeRange(0, canto2Str.count))
                                                 var canto2Mutable = NSMutableString(string: canto2Str)
-                                            regex.replaceMatches(in: canto2Mutable, options: .withoutAnchoringBounds, range: NSMakeRange(0, canto2Str.count), withTemplate: "")
+                                                regex.replaceMatches(in: canto2Mutable, options: .withoutAnchoringBounds, range: NSMakeRange(0, canto2Str.count), withTemplate: "")
                                                 canto2Str = canto2Mutable as String
                                             } catch let error {
-                                                                            print(error)
-                                                                        }
+                                                print(error)
+                                            }
                                         }
                                         
                                         
@@ -358,7 +355,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     }
                                     
                                     self.mCantoneseYale.text = cantoStr
-
+                                    
                                     
                                     
                                     //                            do {
@@ -390,7 +387,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                     if let match = regex.firstMatch(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count)) {
                                         self.mFrTrans.text = response.value!.substring(with: Range(match.range, in: response.value!)!).stringByDecodingHTMLEntities
                                     } else {
-                                         self.mFrTrans.text = ""
+                                        self.mFrTrans.text = ""
                                     }
                                     if let match = regex1.firstMatch(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count)) {
                                         self.mDeTrans.text = response.value!.substring(with: Range(match.range, in: response.value!)!).stringByDecodingHTMLEntities
@@ -408,7 +405,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                                             return str.count < 8
                                         }.joined(separator: ", ")
                                     } else {
-                                         self.mCangjie.text = ""
+                                        self.mCangjie.text = ""
                                     }
                                 }
                                 //                            do {
@@ -435,9 +432,38 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 }
                 mCollectionView.reloadData()
             } else {
-                let alert = UIAlertController(title: nil, message: NSLocalizedString("no_results", comment: ""), preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
-                present(alert, animated: true, completion: nil)
+//                let alert = UIAlertController(title: nil, message: NSLocalizedString("no_results", comment: ""), preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
+//                present(alert, animated: true, completion: nil)
+                
+                
+                //"https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=\()&useutf8=true"
+                AF.request("https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=\(mSearchBox.text!.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)&useutf8=true")
+                    .validate(statusCode: 200..<300)
+                    .responseString { response in
+                        switch response.result {
+                        case .success(let _):
+                            if response.value != nil {
+                                let tradRegex = """
+                                (?<=kTraditionalVariant\\</a\\>\\n\\</td\\>\\n\\<td align=left\\>\\n\\<code>\\<a href="http\\://www\\.unicode\\.org/cgi\\-bin/GetUnihanData\\.pl\\?codepoint\\=).*?(?=&)
+                                """
+                                let regexTrad = try! NSRegularExpression(pattern: tradRegex)
+                                if let matchTrad = regexTrad.firstMatch(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count)) {
+                                    print(response.value!.substring(with: Range(matchTrad.range, in: response.value!)!))
+                                    //self.mCangjie.text = response.value!.substring(with: Range(matchTrad.range, in: response.value!)!)
+                                } else {
+                                    let alert = UIAlertController(title: nil, message: NSLocalizedString("no_results", comment: ""), preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
+                                    self.present(alert, animated: true, completion: nil)
+                                }
+                            }
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                            let alert = UIAlertController(title: nil, message: NSLocalizedString("no_results", comment: ""), preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                }
             }
         }
     }
@@ -484,7 +510,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         mSearchBox.placeholder = NSLocalizedString("search_placeholder", comment: "")
         mSearchBtn.setIcon(icon: .icofont(.search), iconSize: nil, color: .white, backgroundColor: .systemBlue, forState: .normal)
         mRandomBtn.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.questionCircle), iconColor: .white, postfixText: NSLocalizedString("random_character", comment: ""), postfixTextColor: .white, backgroundColor: .systemGreen, forState: .normal, textSize: nil, iconSize: nil)
-                mReckon.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.cameraRetro), iconColor: .white, postfixText: NSLocalizedString("s_conversion", comment: ""), postfixTextColor: .white, backgroundColor: .systemIndigo, forState: .normal, textSize: nil, iconSize: nil)
+        mReckon.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.cameraRetro), iconColor: .white, postfixText: NSLocalizedString("s_conversion", comment: ""), postfixTextColor: .white, backgroundColor: .systemIndigo, forState: .normal, textSize: nil, iconSize: nil)
         //        mEngTrans.lineBreakMode = .byWordWrapping
         //        mEngTrans.numberOfLines = 0
         //        mFrTrans.lineBreakMode = .byWordWrapping
