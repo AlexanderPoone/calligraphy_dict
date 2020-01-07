@@ -206,6 +206,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     private var mCurrent:[(image:String,starred:Bool)] = []
     
+    private var mIsLooping = false
+    
     @IBOutlet weak var mReckon: UIButton!
     
     @IBOutlet weak var mAdView: GADBannerView!
@@ -242,7 +244,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var mHanyuPinyinLbl: UILabel!
     @IBOutlet weak var mHanyuPinyin: UILabel!
-    
+        
+    private let alamoFireManager: Session = {
+        let manager = ServerTrustManager(evaluators: ["www.unicode.org": DisabledEvaluator()])
+        let configuration = URLSessionConfiguration.af.default
+
+        return Session(configuration: configuration, serverTrustManager: manager)
+    }()
     
     @IBAction func mRandom() {
         mSearchBox.text = DBManager.shared.random()
@@ -257,6 +265,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         } else {
             let picts = DBManager.shared.getPict(mSearchBox.text!)
             if picts.count > 0 {
+                self.mIsLooping = false
+                
                 mInstructions.isHidden = true
                 mCangjieLbl.isHidden = false
                 mCantoneseYaleLbl.isHidden = false
@@ -432,29 +442,60 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 }
                 mCollectionView.reloadData()
             } else {
+                if self.mIsLooping {
+                    self.mIsLooping = false
+                    let alert = UIAlertController(title: nil, message: NSLocalizedString("not_recorded", comment: ""), preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+                
+                
 //                let alert = UIAlertController(title: nil, message: NSLocalizedString("no_results", comment: ""), preferredStyle: .alert)
 //                alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
 //                present(alert, animated: true, completion: nil)
                 
                 
                 //"https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=\()&useutf8=true"
-                AF.request("https://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=\(mSearchBox.text!.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)&useutf8=true")
+               print(mSearchBox.text!.unicodeScalars[mSearchBox.text!.unicodeScalars.startIndex].value)
+                AF.request("https://codepoints.net/U+\(String(mSearchBox.text!.unicodeScalars[mSearchBox.text!.unicodeScalars.startIndex].value, radix: 16))")
                     .validate(statusCode: 200..<300)
                     .responseString { response in
                         switch response.result {
                         case .success(let _):
+                            print(response.value)
                             if response.value != nil {
-                                let tradRegex = """
-                                (?<=kTraditionalVariant\\</a\\>\\n\\</td\\>\\n\\<td align=left\\>\\n\\<code>\\<a href="http\\://www\\.unicode\\.org/cgi\\-bin/GetUnihanData\\.pl\\?codepoint\\=).*?(?=&)
-                                """
+                                let tradRegex = "(?<=kTraditionalVariant\\)\\</small\\>\\</th\\>\\n        \\<td\\>\\n        \\<).*?(?=\\\" height)"
+                                //                                (?<=\\<tr class\\=\\"p_kTraditionalVariant\\"\\>\\n        \\<th class\\=\\"gl\\" data-term\\=\\"kTraditionalVariant\\"\\>Traditional Variant\\n         \\<small\\>\\(kTraditionalVariant\\)\\<\\/small\\>\\<\\/th\\>\\n\\<td\\>\\n        \\<).*?(?=height)
                                 let regexTrad = try! NSRegularExpression(pattern: tradRegex)
                                 if let matchTrad = regexTrad.firstMatch(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count)) {
                                     print(response.value!.substring(with: Range(matchTrad.range, in: response.value!)!))
                                     //self.mCangjie.text = response.value!.substring(with: Range(matchTrad.range, in: response.value!)!)
+                                    let abc = response.value!.substring(with: Range(matchTrad.range, in: response.value!)!)
+                                    self.mSearchBox.text = String(abc.suffix(1))
+                                    
+                                    if !self.mIsLooping {
+                                        self.mIsLooping = true
+                                        self.mSearchPicts()
+                                    }
                                 } else {
-                                    let alert = UIAlertController(title: nil, message: NSLocalizedString("no_results", comment: ""), preferredStyle: .alert)
-                                    alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
-                                    self.present(alert, animated: true, completion: nil)
+                                    let variantRegex = "(?<=kZVariant\\)\\</small\\>\\</th\\>\\n        <td>\\n        <a).*?(?=\\\" height)"
+                                    let regexVariant = try! NSRegularExpression(pattern: variantRegex)
+                                    if let matchVariant = regexVariant.firstMatch(in: response.value!, options: [], range: NSMakeRange(0, response.value!.count)) {
+                                        print(response.value!.substring(with: Range(matchVariant.range, in: response.value!)!))
+                                        //self.mCangjie.text = response.value!.substring(with: Range(matchTrad.range, in: response.value!)!)
+                                        let abc = response.value!.substring(with: Range(matchVariant.range, in: response.value!)!)
+                                        self.mSearchBox.text = String(abc.suffix(1))
+                                        
+                                        if !self.mIsLooping {
+                                            self.mIsLooping = true
+                                            self.mSearchPicts()
+                                        }
+                                    } else {
+                                        let alert = UIAlertController(title: nil, message: NSLocalizedString("not_recorded", comment: ""), preferredStyle: .alert)
+                                        alert.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .default, handler: nil))
+                                        self.present(alert, animated: true, completion: nil)
+                                    }
                                 }
                             }
                         case .failure(let error):

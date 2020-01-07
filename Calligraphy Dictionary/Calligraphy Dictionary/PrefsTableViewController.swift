@@ -110,7 +110,8 @@ class PrefsTableViewController: UITableViewController, GADBannerViewDelegate {
               } else if reference.contains("Hans") {
                   self.mLocaleSubtitle.text = "简体中文"
               } else {
-                  switch reference {
+                print(reference)
+                switch reference.prefix(2) {
                   case "fr":
                       self.mLocaleSubtitle.text = "français"
                   case "ca":

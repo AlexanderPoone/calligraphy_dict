@@ -74,7 +74,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 8b7474adb7f7ed4825b56aeea286e250de0f4d0a
+    :commit: e39be5e94ca8845ae37e3acf0c47a62709fc42d5
     :git: https://github.com/Alamofire/Alamofire
 
 SPEC CHECKSUMS:

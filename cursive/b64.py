@@ -7,7 +7,7 @@ from os import system
 import pandas as pd
 #import pandas #save for UnicodeHan
 
-remove('fmdb.db')
+#remove('fmdb.db')
 conn = sqlite3.connect('fmdb.db')
 
 c = conn.cursor()
