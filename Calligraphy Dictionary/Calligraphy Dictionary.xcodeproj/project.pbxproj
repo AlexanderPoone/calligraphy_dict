@@ -36,6 +36,8 @@
 		4B4D285823B61C9B000006EB /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D285323B61C9B000006EB /* Main.strings */; };
 		4B4D285923B61C9B000006EB /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B4D285523B61C9B000006EB /* LaunchScreen.strings */; };
 		4B4D286F23B624D5000006EB /* EmulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4D286E23B624D5000006EB /* EmulationViewController.swift */; };
+		4B84C72623C5ACED00695EFC /* DonationPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B84C72523C5ACED00695EFC /* DonationPopupViewController.swift */; };
+		4B84C72823C5AED800695EFC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B84C72723C5AED800695EFC /* StoreKit.framework */; };
 		4BF033C923B6115F00C4C8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF033C823B6115F00C4C8FD /* AppDelegate.swift */; };
 		4BF033CB23B6115F00C4C8FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF033CA23B6115F00C4C8FD /* SceneDelegate.swift */; };
 		4BF033CD23B6115F00C4C8FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF033CC23B6115F00C4C8FD /* ViewController.swift */; };
@@ -124,6 +126,8 @@
 		4B4D286C23B61CD0000006EB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		4B4D286D23B61CD0000006EB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4B4D286E23B624D5000006EB /* EmulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmulationViewController.swift; sourceTree = "<group>"; };
+		4B84C72523C5ACED00695EFC /* DonationPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationPopupViewController.swift; sourceTree = "<group>"; };
+		4B84C72723C5AED800695EFC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4BF033C523B6115F00C4C8FD /* Calligraphy Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calligraphy Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF033C823B6115F00C4C8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BF033CA23B6115F00C4C8FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86FBC2F992677EC1CD6D84BD /* Pods_Calligraphy_Dictionary.framework in Frameworks */,
+				4B84C72823C5AED800695EFC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +206,7 @@
 				4B4D284623B61C8C000006EB /* Localizable.strings */,
 				4B4D284823B61C8D000006EB /* Main.storyboard */,
 				4B4D286E23B624D5000006EB /* EmulationViewController.swift */,
+				4B84C72523C5ACED00695EFC /* DonationPopupViewController.swift */,
 				4B0DF01123B6153400A5BBA4 /* ReckonObjcViewController.h */,
 				4B0DF00C23B6153300A5BBA4 /* ReckonObjcViewController.mm */,
 				4BF033C823B6115F00C4C8FD /* AppDelegate.swift */,
@@ -256,6 +262,7 @@
 		665E29BF39F3A0ABE49BF3A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B84C72723C5AED800695EFC /* StoreKit.framework */,
 				F87D6EC57E4BC58DBA9AEBB0 /* Pods_Calligraphy_Dictionary.framework */,
 				045DCA84771F39B86E27AA2E /* Pods_Calligraphy_Dictionary_Calligraphy_DictionaryUITests.framework */,
 				07C252EB1B8A3F8A300E4A7C /* Pods_Calligraphy_DictionaryTests.framework */,
@@ -545,6 +552,7 @@
 				4B0DF03623B6153600A5BBA4 /* StarredViewController.swift in Sources */,
 				4B0DF03F23B6153600A5BBA4 /* ViewController.swift in Sources */,
 				4B0DF03D23B6153600A5BBA4 /* BackgroundTableViewCell.swift in Sources */,
+				4B84C72623C5ACED00695EFC /* DonationPopupViewController.swift in Sources */,
 				4B0DF02A23B6153600A5BBA4 /* SceneDelegate.swift in Sources */,
 				4B0DF03123B6153600A5BBA4 /* LocaleDropDownTableViewCell.swift in Sources */,
 				4B4D286F23B624D5000006EB /* EmulationViewController.swift in Sources */,
@@ -783,14 +791,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 64;
 				DEVELOPMENT_TEAM = 94RT5FA8WL;
 				INFOPLIST_FILE = "Calligraphy Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.09;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "softfeta.com.github.Calligraphy-Dictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "softfeta.com.github.Calligraphy-Dictionary AppStore";
@@ -809,14 +817,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 64;
 				DEVELOPMENT_TEAM = 94RT5FA8WL;
 				INFOPLIST_FILE = "Calligraphy Dictionary/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.09;
+				MARKETING_VERSION = 1.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "softfeta.com.github.Calligraphy-Dictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "softfeta.com.github.Calligraphy-Dictionary AppStore";

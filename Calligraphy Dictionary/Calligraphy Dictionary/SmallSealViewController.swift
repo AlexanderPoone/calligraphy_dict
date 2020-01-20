@@ -174,6 +174,7 @@ class SmallSealViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet weak var mCaption: UILabel!
     @IBOutlet weak var mBigCharDisplay: UILabel!
     
+    @IBOutlet weak var mDonationsBtn: UIButton!
     @IBAction func mRandom() {
         mSearchBox.text = DBManager.shared.randomSmallSeal()
         mSearchPicts()
@@ -410,6 +411,7 @@ class SmallSealViewController: UIViewController, UICollectionViewDataSource, UIC
         mSearchBtn.setIcon(icon: .icofont(.search), iconSize: nil, color: .white, backgroundColor: .systemBlue, forState: .normal)
         mRandomBtn.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.questionCircle), iconColor: .white, postfixText: NSLocalizedString("random_character", comment: ""), postfixTextColor: .white, backgroundColor: .systemGreen, forState: .normal, textSize: nil, iconSize: nil)
         mReckon.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.cameraRetro), iconColor: .white, postfixText: NSLocalizedString("s_conversion", comment: ""), postfixTextColor: .white, backgroundColor: .systemIndigo, forState: .normal, textSize: nil, iconSize: nil)
+        mDonationsBtn.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.donate), iconColor: .white, postfixText: NSLocalizedString("donate", comment: ""), postfixTextColor: .white, backgroundColor: .systemYellow, forState: .normal, textSize: nil, iconSize: nil)
         //        mEngTrans.lineBreakMode = .byWordWrapping
         //        mEngTrans.numberOfLines = 0
         //        mFrTrans.lineBreakMode = .byWordWrapping

@@ -1,5 +1,38 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
+  - Braintree/Apple-Pay (4.30.2):
+    - Braintree/Core
+  - Braintree/Card (4.30.2):
+    - Braintree/Core
+  - Braintree/Core (4.30.2)
+  - Braintree/PaymentFlow (4.30.2):
+    - Braintree/Card
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPal (4.30.2):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.30.2):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.30.2):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.30.2)
+  - Braintree/UnionPay (4.30.2):
+    - Braintree/Card
+    - Braintree/Core
+  - BraintreeDropIn (7.5.0):
+    - BraintreeDropIn/DropIn (= 7.5.0)
+  - BraintreeDropIn/DropIn (7.5.0):
+    - Braintree/Card (~> 4.30)
+    - Braintree/Core (~> 4.30)
+    - Braintree/PaymentFlow (~> 4.30)
+    - Braintree/PayPal (~> 4.30)
+    - Braintree/UnionPay (~> 4.30)
+    - BraintreeDropIn/UIKit
+  - BraintreeDropIn/UIKit (7.5.0)
   - DropDown (2.3.13)
   - FlagKit (2.2)
   - FMDB (2.7.5):
@@ -42,6 +75,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire`, branch `master`)
+  - Braintree/Apple-Pay
+  - Braintree/Card
+  - Braintree/PayPal
+  - BraintreeDropIn
   - DropDown
   - FlagKit
   - FMDB
@@ -54,6 +91,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Braintree
+    - BraintreeDropIn
     - DropDown
     - FlagKit
     - FMDB
@@ -79,6 +118,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  Braintree: 9fc21dc2ead57d104c4a0743454308e404217ec7
+  BraintreeDropIn: 15d6f53bf80bc0ae7809ab17803100c0a5448fd2
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FlagKit: eca7dc89064b0c986302ba9acefad1bf80a435b1
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -92,6 +133,6 @@ SPEC CHECKSUMS:
   SwiftIcons: e652cfd2676441c462ad57b6e92977faf577e590
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: dbdff05640307f42b24c1743309af6c79d301e0f
+PODFILE CHECKSUM: 785257f94f16849c48ee52ab36ff62c995887670
 
 COCOAPODS: 1.9.0.beta.2

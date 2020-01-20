@@ -191,20 +191,27 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.mShare.setIcon(icon: .fontAwesomeSolid(.share), iconSize: nil, color: .gray, backgroundColor: .clear, forState: .normal)
             cell.mShare.tag = indexPath.section //*-1 if
             cell.mShare.addTarget(self, action: #selector(share), for: .touchDown)
+            
+            if let num = mCurrent[indexPath.section].caption {
+            cell.mFooter.text = NSLocalizedString("master_\(num)", comment: "")
+            } else {
+                cell.mFooter.text = ""
+            }
         } catch {
             print("Unknown error")
         }
         return cell
     }
     
-    //    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    //        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Caption", for: indexPath) as! CaptionCollectionReusableView
-    //        header.mCaption.text = "北宋·米芾 (978-1013)《草堂》"
-    //        return header
-    //    }
+//        func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "Caption", for: indexPath) as! CaptionCollectionReusableView
+//            footer.mCaption.text = "北宋·米芾 (978-1013)《草堂》"
+//            return footer
+//        }
+    
     private let mPreferences = UserDefaults.standard
     
-    private var mCurrent:[(image:String,starred:Bool)] = []
+    private var mCurrent:[(image:String,caption:Int?,starred:Bool)] = []
     
     private var mIsLooping = false
     
@@ -244,6 +251,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var mHanyuPinyinLbl: UILabel!
     @IBOutlet weak var mHanyuPinyin: UILabel!
+    
+    @IBOutlet weak var mDonationsBtn: UIButton!
+    
         
     private let alamoFireManager: Session = {
         let manager = ServerTrustManager(evaluators: ["www.unicode.org": DisabledEvaluator()])
@@ -552,6 +562,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         mSearchBtn.setIcon(icon: .icofont(.search), iconSize: nil, color: .white, backgroundColor: .systemBlue, forState: .normal)
         mRandomBtn.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.questionCircle), iconColor: .white, postfixText: NSLocalizedString("random_character", comment: ""), postfixTextColor: .white, backgroundColor: .systemGreen, forState: .normal, textSize: nil, iconSize: nil)
         mReckon.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.cameraRetro), iconColor: .white, postfixText: NSLocalizedString("s_conversion", comment: ""), postfixTextColor: .white, backgroundColor: .systemIndigo, forState: .normal, textSize: nil, iconSize: nil)
+        mDonationsBtn.setIcon(prefixText: "", prefixTextColor: .white, icon: .fontAwesomeSolid(.donate), iconColor: .white, postfixText: NSLocalizedString("donate", comment: ""), postfixTextColor: .white, backgroundColor: .systemYellow, forState: .normal, textSize: nil, iconSize: nil)
         //        mEngTrans.lineBreakMode = .byWordWrapping
         //        mEngTrans.numberOfLines = 0
         //        mFrTrans.lineBreakMode = .byWordWrapping

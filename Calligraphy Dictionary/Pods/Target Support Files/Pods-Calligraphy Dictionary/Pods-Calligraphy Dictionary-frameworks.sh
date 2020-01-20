@@ -192,6 +192,9 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework"
+  install_framework "${PODS_ROOT}/Braintree/Frameworks/CardinalMobile.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FlagKit/FlagKit.framework"
@@ -204,6 +207,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework"
+  install_framework "${PODS_ROOT}/Braintree/Frameworks/CardinalMobile.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FlagKit/FlagKit.framework"

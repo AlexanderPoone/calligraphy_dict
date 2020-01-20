@@ -110,17 +110,17 @@ class DBManager: NSObject {
         return char
     }
     
-    func getPict(_ character:String) -> [(image:String,starred:Bool)] {
-        var picts: [(image:String,starred:Bool)] = []
+    func getPict(_ character:String) -> [(image:String,caption:Int?,starred:Bool)] {
+        var picts: [(image:String,caption:Int?,starred:Bool)] = []
         
         if openDatabase() {
-            let query = "SELECT c.image, s.key FROM cursive c LEFT JOIN starred s ON c.image = s.key WHERE charName = ?"
+            let query = "SELECT c.image, c.caption, s.key FROM cursive c LEFT JOIN starred s ON c.image = s.key WHERE charName = ?"
             
             do {
                 let results = try database.executeQuery(query, values: [character])
                 
                 while results.next() {
-                    picts.append((image: results.string(forColumn: "image")!, starred: (results.string(forColumn: "key") != nil)))
+                    picts.append((image: results.string(forColumn: "image")!, caption: results.object(forColumn: "caption") as? Int, starred: (results.string(forColumn: "key") != nil)))
                 }
             }
             catch {
@@ -204,13 +204,13 @@ class DBManager: NSObject {
     func getHistory(_ lang:String) -> [[String:String]] {
         var dicts:[[String:String]] = []
         if openDatabase() {
-            let query = "SELECT c.charName, c.image, c.caption_\(lang), s.charName AS s_charName, s.image AS s_image, s.caption_\(lang) AS s_caption_\(lang), h.createDate FROM history h LEFT JOIN cursive c ON h.type = 0 AND h.key = c.image LEFT JOIN smallseal s ON h.type = 1 AND h.key = s.image ORDER BY h.createDate DESC"
+            let query = "SELECT c.charName, c.image, c.caption, s.charName AS s_charName, s.image AS s_image, s.caption_\(lang) AS s_caption_\(lang), h.createDate FROM history h LEFT JOIN cursive c ON h.type = 0 AND h.key = c.image LEFT JOIN smallseal s ON h.type = 1 AND h.key = s.image ORDER BY h.createDate DESC"
             
             do {
                 let results = try database.executeQuery(query, values: nil)
                 
                 while results.next() {
-                    let dict = ["key": results.string(forColumn: "charName") ?? results.string(forColumn: "s_charName")!, "image": results.string(forColumn: "image") ?? results.string(forColumn: "s_image")!, "caption": results.string(forColumn: "caption_\(lang)") ?? (results.string(forColumn: "s_caption_\(lang)") ?? ""), "createDate": results.string(forColumn: "createDate")!]
+                    let dict = ["key": results.string(forColumn: "charName") ?? results.string(forColumn: "s_charName")!, "image": results.string(forColumn: "image") ?? results.string(forColumn: "s_image")!, "caption": results.string(forColumn: "caption") ?? (results.string(forColumn: "s_caption_\(lang)") ?? ""), "createDate": results.string(forColumn: "createDate")!]
                     
                     dicts.append(dict)
                 }
@@ -255,13 +255,13 @@ class DBManager: NSObject {
     func getStarred(_ lang:String) -> [[String:String]] {
         var dicts:[[String:String]] = []
         if openDatabase() {
-            let query = "SELECT c.charName, c.image, c.caption_\(lang), s.charName AS s_charName, s.image AS s_image, s.caption_\(lang) AS s_caption_\(lang), x.createDate FROM starred x LEFT JOIN cursive c ON x.type = 0 AND x.key = c.image LEFT JOIN smallseal s ON x.type = 1 AND x.key = s.image ORDER BY x.createDate DESC"
+            let query = "SELECT c.charName, c.image, c.caption, s.charName AS s_charName, s.image AS s_image, s.caption_\(lang) AS s_caption_\(lang), x.createDate FROM starred x LEFT JOIN cursive c ON x.type = 0 AND x.key = c.image LEFT JOIN smallseal s ON x.type = 1 AND x.key = s.image ORDER BY x.createDate DESC"
 
             do {
                 let results = try database.executeQuery(query, values: nil)
                 
                 while results.next() {
-                    let dict = ["key": results.string(forColumn: "charName") ?? results.string(forColumn: "s_charName")!, "image": results.string(forColumn: "image") ?? results.string(forColumn: "s_image")!, "caption": results.string(forColumn: "caption_\(lang)") ?? (results.string(forColumn: "s_caption_\(lang)") ?? ""), "createDate": results.string(forColumn: "createDate")!]
+                    let dict = ["key": results.string(forColumn: "charName") ?? results.string(forColumn: "s_charName")!, "image": results.string(forColumn: "image") ?? results.string(forColumn: "s_image")!, "caption": results.string(forColumn: "caption") ?? (results.string(forColumn: "s_caption_\(lang)") ?? ""), "createDate": results.string(forColumn: "createDate")!]
                     
                     dicts.append(dict)
                 }

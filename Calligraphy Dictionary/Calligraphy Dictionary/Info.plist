@@ -17,38 +17,26 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>61</string>
+	<string>64</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-9627209153774793~4245600645</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSAllowsArbitraryLoadsForMedia</key>
-		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>www.unicode.org</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+			</dict>
+		</dict>
 	</dict>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-      <key>NSExceptionDomains</key>
-      <dict>
-        <key>www.unicode.org</key>
-        <dict>
-          <!--Include to allow subdomains-->
-          <key>NSIncludesSubdomains</key>
-          <true/>
-          <!--Include to allow HTTP requests-->
-          <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-          <true/>
-          <!--Include to specify minimum TLS version-->
-          <key>NSTemporaryExceptionMinimumTLSVersion</key>
-          <string>TLSv1.1</string>
-        </dict>
-      </dict>
-    </dict>
 	<key>NSCameraUsageDescription</key>
 	<string>For simutaneous character translation feature.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>

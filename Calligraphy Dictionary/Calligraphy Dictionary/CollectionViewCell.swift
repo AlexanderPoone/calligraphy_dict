@@ -13,4 +13,5 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var mCharImg: UIImageView!
     @IBOutlet weak var mStar: UIButton!
     @IBOutlet weak var mShare: UIButton!
+        @IBOutlet weak var mFooter: UILabel!
 }
