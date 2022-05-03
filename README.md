@@ -1,3 +1,3 @@
 #### TODOs
 * Port to Flutter
-* Skeletonise characters for stroke order animations
+* For stroke order animations: Skeletonise characters -> split into strokes
