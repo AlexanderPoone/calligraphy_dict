@@ -1,3 +1,7 @@
+#########################################################################
+# Skeletonisation for Segmentation for Stroke Order Visualisation
+#########################################################################
+
 from glob import glob
 from skimage.io import imread, imsave
 from skimage.morphology import skeletonize, medial_axis, thin
