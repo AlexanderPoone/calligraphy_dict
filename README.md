@@ -1,4 +1,5 @@
-## Dataset: Novel task yet to be solved by machine learning
+## Dataset: Han characters which are often seen on r/translator subreddit
+Novel task yet to be solved by machine learning
 ### Challenges
 1. Skeletonisation... alright! But after junctions it is sometimes hard to determine which stroke is which? Are they counted as the same or separate strokes?
   * Vectorisation to an ***order set of cubic Bezier curves*** - done.
