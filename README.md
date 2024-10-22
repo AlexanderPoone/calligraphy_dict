@@ -6,7 +6,7 @@
   * Issue #2: Machine learning may be needed to group the strokes. Zooming out affects whether vectorisation treating strokes as one or two.
 2. At least it can count the number of strokes, and compare results with the ground truth.
 3. Indeed, there are virtually infinite variants, but OCR of cursive characters will be very helpful.
-4. Once we've obtained the correct skeletonisation, how can we transform them into fill animations? Style transfer via GAN? We want After Effects-style animations so we can export them to Lottie, to use it on Android and iOS!
+4. Once we've obtained the correct skeletonisation, how can we transform them into fill animations? ~~Style transfer via GAN?~~ We want After Effects-style animations so we can export them to Lottie, to use it on Android and iOS!
    * Import coordinates of the ordered set of splines into After Effects: to enumerate them + move along the strokes
 
 ## TODOs
