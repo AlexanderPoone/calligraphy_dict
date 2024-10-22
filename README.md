@@ -1,7 +1,7 @@
 ## Dataset: Novel task yet to be solved by machine learning
 ### Challenges
 1. Skeletonisation... alright! But after junctions it is sometimes hard to determine which stroke is which? Are they counted as the same or separate strokes?
-  * Vectorisation to an **order set of cubic Bezier curves** - done.
+  * Vectorisation to an ***order set of cubic Bezier curves*** - done.
   * Issue #1: Zooming out creates islands.
   * Issue #2: Machine learning may be needed to group the strokes. Zooming out affects whether vectorisation treating strokes as one or two.
 2. At least it can count the number of strokes, and compare results with the ground truth.
