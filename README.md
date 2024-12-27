@@ -1,4 +1,4 @@
-## Dataset: Han characters which are often seen on r/translator subreddit
+## Dataset: *Han characters which are often seen on r/translator subreddit*
 > [!NOTE]
 > Novel task yet to be solved by machine learning?
 ### Algorithm Challenges
