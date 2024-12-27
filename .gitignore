@@ -1,3 +1,7 @@
+*.pem
+.DS_Store
+**/.DS_Store
+
 Calligraphy\ Dictionary/Pods/OpenCV2-contrib/opencv2.framework/
 Calligraphy\ Dictionary/Pods/OpenCV2-contrib/opencv2.framework/**
 Calligraphy\ Dictionary/Pods/OpenCV2/opencv2.framework/
