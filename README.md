@@ -1,6 +1,6 @@
 ## Dataset: *Han characters which are often seen on r/translator subreddit*
 ### Problem Description
-[TL;DR](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fwww.reddit.com%2Fr%2Ftranslator%2F+cursive+chinese&oq=site%3Ahttps%3A%2F%2Fwww.reddit.com%2Fr%2Ftranslator%2F+cursive+chinese&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEINTU2N2owajSoAgCwAgE&sourceid=chrome&ie=UTF-8)
+[**TL;DR**](https://www.google.com/search?q=site%3Ahttps%3A%2F%2Fwww.reddit.com%2Fr%2Ftranslator%2F+cursive+chinese&oq=site%3Ahttps%3A%2F%2Fwww.reddit.com%2Fr%2Ftranslator%2F+cursive+chinese&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg60gEINTU2N2owajSoAgCwAgE&sourceid=chrome&ie=UTF-8)
 > [!NOTE]
 > Novel task yet to be solved by machine learning?
 ### Algorithm Challenges
