@@ -15,4 +15,4 @@
 ### Interface TODOs
 1. Port to Flutter for better cross-platform maintenance (30% done) (replace [these](Calligraphy%20Dictionary/Podfile) libraries)
 2. For stroke order animations: Skeletonise characters -> split into strokes (half done) ~~https://stackoverflow.com/questions/62949339/how-to-draw-a-curve-like-this-in-uibezierpath-swift Draw `UIBezierPath` on CoreAnimation `CAShapeLayer`~~ Use Lottie
-3. We need more samples, the target would be ~10,000.
+3. We need more samples, the target would be ~10,000. I do have a digital dictionary book of calligraphy though - quite easy to turn it into a list of `(character, pic)` pairs.
